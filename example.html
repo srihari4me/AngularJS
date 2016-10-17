@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>New HMTL document by NewJect</title>
+
+</head>
+
+<!--body ng-app="MyApp"--> <!-- route module -->
+
+<body> <!-- Add the code in controller i.e. angular.bootstrap(document.body, ["MyApp"]) -->
+
+    <div ng-controller="FirstCtrl">
+        <h3>First Controller</h3>
+        <p>{{model.now}}</p>
+    </div>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/FirstCtrl.js"></script>
+    
+    <!--script>
+var locale = JSON.parse(localStorage.getItem('locale'));
+        console.log("locale " + locale);
+if (locale) {
+    document.write('<script src="scripts/i18n/angular-locale_'+locale+'.js"><\/script>');
+}
+</script-->
+</body>
+
+</html>
