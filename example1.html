@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>New HMTL document by NewJect</title>
+
+</head>
+
+<!--body ng-app="MyApp"--> <!-- route module -->
+
+<body ng-app="MyApp"> <!-- Add the code in controller i.e. angular.bootstrap(document.body, ["MyApp"]) -->
+
+    <div ng-controller="FirstCtrl">
+        <h3>First Controller</h3>
+        <p>{{model.now}}</p>
+    </div>
+    
+    <div ng-controller="SecondCtrl">
+        <h3>Names</h3>
+       <select ng-options="name as name for name in names" ng-model="name" ng-init="name" id="nameList">
+           <!--option value="">Choose an option {{optional ? '(optional)' : ''}}</option-->
+           <option value="">Choose an option {{name ? '(name)' : ''}}</option>
+        
+        </select>
+        <br/>
+        <br/>
+        <button ng-click="addName()">Add Name</button>
+        <button ng-click="removeName()">Remove Name</button>
+    </div>
+    
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/services/MyDataService.js"></script>
+    <script src="scripts/controllers/FirstCtrl.js"></script>
+    <script src="scripts/controllers/SecondCtrl.js"></script>
+      
+</body>
+
+</html>

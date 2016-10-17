@@ -8,7 +8,7 @@ angular.module('MyApp.controllers')
             }
             
             var update=function() {
-                $scope.model.now=new Date();
+                $scope.model.now=new Date().toLocaleString();
             }
             
             //function update(){}
@@ -26,4 +26,4 @@ angular.module('MyApp.controllers')
             })
          }]);
 
-angular.bootstrap(document.body, ["MyApp"])
+//angular.bootstrap(document.body, ["MyApp"])
