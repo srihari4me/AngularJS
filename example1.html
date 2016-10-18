@@ -73,7 +73,15 @@
     
     </div-->
     
-    <div ng-controller="PlayerHttpCtrl">
+    <!--div ng-controller="PlayerHttpCtrl">
+        <h1>Players</h1>
+        <span ng-repeat="player in players" animation style="display:inline-block">
+            <player-info-card player="player"></player-info-card>
+        </span>
+    
+    </div-->
+    
+    <div ng-controller="PlayerHttpCtrlResolve">
         <h1>Players</h1>
         <span ng-repeat="player in players" animation style="display:inline-block">
             <player-info-card player="player"></player-info-card>
@@ -113,6 +121,9 @@
     <script src="scripts/services/AsyncPlayerService.js"></script>
     <script src="scripts/services/PlayerHttpService.js"></script>
     <script src="scripts/controllers/PlayerHttpCtrl.js"></script>
+    
+    <script src="scripts/services/PlayerHttpServiceResolvePromise.js"></script>
+    <script src="scripts/controllers/PlayerHttpCtrlResolve.js"></script>
       
 </body>
 
