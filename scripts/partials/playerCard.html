@@ -1,0 +1,23 @@
+<div>
+    <h2>Name : {{player.name}}</h2>
+    
+    <h3>Mentor : {{player.mentor}}</h3>
+    
+    <!--h4>DOB : {{player.birthDate}}</h4-->
+    
+    <p>Friends :
+        <span ng-if="player.friends">
+            
+            <ul>
+                <li ng-repeat="friend in player.friends">
+                    {{friend}}
+                </li>
+            </ul>
+        
+        </span>
+    
+    </p>
+    
+    <button ng-click="clickMe(player)">Click Me</button>
+
+</div>
