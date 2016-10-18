@@ -49,9 +49,7 @@
     <div ng-controller="ThirdCtrl">
         <h3>Names</h3>
        <select ng-options="name as name for name in names" ng-model="name" ng-init="name" id="nameList">
-           <!--option value="">Choose an option {{optional ? '(optional)' : ''}}</option-->
            <option value="">Choose an option {{name ? '(name)' : ''}}</option>
-        
         </select>
         <br/>
         <br/>
@@ -59,7 +57,23 @@
         <button ng-click="removeName()">Remove Name</button>
     </div>
     
-    <div ng-controller="PlayerCtrl">
+    <!--div ng-controller="PlayerCtrl">
+        <h1>Players</h1>
+        <span ng-repeat="player in players" animation style="display:inline-block">
+            <player-info-card player="player"></player-info-card>
+        </span>
+    
+    </div-->
+    
+    <!--div ng-controller="AsyncPlayerCtrl">
+        <h1>Players</h1>
+        <span ng-repeat="player in players" animation style="display:inline-block">
+            <player-info-card player="player"></player-info-card>
+        </span>
+    
+    </div-->
+    
+    <div ng-controller="PlayerHttpCtrl">
         <h1>Players</h1>
         <span ng-repeat="player in players" animation style="display:inline-block">
             <player-info-card player="player"></player-info-card>
@@ -74,19 +88,31 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
+    
     <script src="scripts/app.js"></script>
+    
     <script src="scripts/services/MyDataService.js"></script>
     <script src="scripts/services/MyDataServiceByService.js"></script>
     <script src="scripts/services/MyDataServiceByProvider.js"></script>
+    
     <script src="scripts/controllers/FirstCtrl.js"></script>
+    
     <script src="scripts/controllers/SecondCtrl.js"></script>
+    
     <script src="scripts/controllers/ThirdCtrl.js"></script>
+    
     <script src="scripts/controllers/FourthCtrl.js"></script>
+    
     <script src="scripts/services/PlayerService.js"></script>
     <script src="scripts/directives/PlayerInfoCard.js"></script>
     <script src="scripts/controllers/PlayerCtrl.js"></script>
+    
     <script src="scripts/directives/animation.js"></script>
-            
+    
+    <script src="scripts/controllers/AsyncPlayerCtrl.js"></script>
+    <script src="scripts/services/AsyncPlayerService.js"></script>
+    <script src="scripts/services/PlayerHttpService.js"></script>
+    <script src="scripts/controllers/PlayerHttpCtrl.js"></script>
       
 </body>
 
