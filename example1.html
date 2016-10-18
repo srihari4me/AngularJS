@@ -61,11 +61,17 @@
     
     <div ng-controller="PlayerCtrl">
         <h1>Players</h1>
-        <span ng-repeat="player in players">
+        <span ng-repeat="player in players" animation style="display:inline-block">
             <player-info-card player="player"></player-info-card>
         </span>
     
     </div>
+    
+    <!--script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script-->
+    
+    <!-- To use JQUERY, load it before Angular JS libraries-->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.12/jquery.transit.min.js"></script>
     
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.js"></script>
     <script src="scripts/app.js"></script>
@@ -79,6 +85,7 @@
     <script src="scripts/services/PlayerService.js"></script>
     <script src="scripts/directives/PlayerInfoCard.js"></script>
     <script src="scripts/controllers/PlayerCtrl.js"></script>
+    <script src="scripts/directives/animation.js"></script>
             
       
 </body>
