@@ -21,7 +21,7 @@ angular.module('MyApp', [
     }
 ]);
 angular.module('MyApp.controllers', []);
-angular.module('MyApp.services', []);
+angular.module('MyApp.services', ['ngResource']);
 angular.module('MyApp.providers', []);
 angular.module('MyApp.directives', []);
 angular.module('MyApp.filters', []);
