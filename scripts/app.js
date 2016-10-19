@@ -4,7 +4,8 @@ angular.module('MyApp', [
     'MyApp.providers',
     'MyApp.services',
     'MyApp.filters',
-    'ui.router'
+    'ui.router',
+    'ngGrid'
 ]).config(
     function ($stateProvider, $httpProvider) {
 
@@ -18,7 +19,7 @@ angular.module('MyApp', [
 
                 Player: "Player",
 
-                Players: function (Player) {
+                players: function (Player) {
                     return Player.query().$promise;
                 }
             }
