@@ -63,7 +63,7 @@ angular.module('MyApp.controllers')
                             '</td>' +
 
                             '<td>' +
-                            '<a class="btn btn-danger" ng-click="deletePlayer(player)">Delete</a>' +
+                            '<a class="btn btn-danger" ng-click="deletePlayer(row.entity)">Delete</a>' +
                             '</td>'
 					}
 							]
@@ -71,7 +71,10 @@ angular.module('MyApp.controllers')
 
 
             $scope.deletePlayer = function(player) {
-                Player.$delete(function() {
+                
+                //var player = this.row.entity;
+                
+                player.$delete(function() {
                     $window.location.href='';
                 })
             }
