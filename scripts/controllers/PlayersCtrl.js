@@ -39,7 +39,7 @@
 //         }]);
 
 angular.module('MyApp.controllers')
-    .controller('PlayersCtrl', ['$scope','$window', 'players',
+    .controller('PlayersCtrl', ['$scope', '$window', 'players',
         function ($scope, $window, players) {
 
 
@@ -57,25 +57,31 @@ angular.module('MyApp.controllers')
                         displayName: 'Debut Year'
 				},
                     {
-                        displayName: 'Actions',
+                        /*displayName: 'Actions',
                         cellTemplate: '<td>' +
-                            '<a class="btn btn-primary" ui-sref="playerDetails({id:player._id})">View</a>' +
+                            '<a class="btn btn-primary" ui-sref="playerDetails({id:row.entity._id})">View</a>' +
                             '</td>' +
-
                             '<td>' +
                             '<a class="btn btn-danger" ng-click="deletePlayer(row.entity)">Delete</a>' +
                             '</td>'
-					}
+					}*/
+
+                        displayName: 'Actions',
+                        cellTemplate: '<div class="grid-action-cell">' +
+                            '<a class="btn btn-xs btn-primary" ui-sref = "playerDetails({id:row.entity._id})" >View</a>' +
+                            "&nbsp;&nbsp"+
+                            '<a class="btn btn-xs btn-danger" ng-click=" $event.stopPropagation();deletePlayer(row.entity);" href="#">Delete</a></div>'
+				}
 							]
             };
 
 
-            $scope.deletePlayer = function(player) {
-                
+            $scope.deletePlayer = function (player) {
+
                 //var player = this.row.entity;
-                
-                player.$delete(function() {
-                    $window.location.href='';
+
+                player.$delete(function () {
+                    $window.location.href = '';
                 })
             }
 

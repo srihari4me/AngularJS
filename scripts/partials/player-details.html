@@ -1,0 +1,29 @@
+<table class="table playertable">
+	<tr>
+		<td>
+			<h3>Details {{player.name}}</h3></td>
+	</tr>
+	<tr>
+		<td>Player Name</td>
+		<td>{{player.name}}</td>
+	</tr>
+
+	<tr>
+		<td>Player Debut Year</td>
+		<td>{{player.debutYear}}</td>
+	</tr>
+
+	<tr>
+		<td>Mentor</td>
+		<td>{{player.mentor}}</td>
+	</tr>
+
+	<tr>
+		<td>Player Type</td>
+		<td>{{player.type}}</td>
+	</tr>
+</table>
+
+<div>
+	<a class="btn btn-primary" ui-sref="updatePlayer({id:player._id})">Edit</a>
+</div>
