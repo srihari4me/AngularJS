@@ -7,13 +7,21 @@ angular.module('MyApp', [
     'ui.router'
 ]).config(
     function ($stateProvider, $httpProvider) {
-        
+
         'use strict';
 
         $stateProvider.state('players', {
             url: '/players',
             templateUrl: 'scripts/partials/players.html',
-            controller: 'PlayersCtrl'
+            controller: 'PlayersCtrl',
+            resolve: {
+
+                Player: "Player",
+
+                Players: function (Player) {
+                    return Player.query().$promise;
+                }
+            }
         }).state('playerDetails', {
             url: '/players/:id/view',
             templateUrl: 'scripts/partials/player-details.html',
@@ -29,10 +37,10 @@ angular.module('MyApp', [
         })
     }
 ).run(
-    function($state) {
-        
+    function ($state) {
+
         'use strict';
-        
+
         $state.go('players'); // define default state
     }
 );

@@ -1,4 +1,4 @@
-angular.module('MyApp.controllers')
+/*angular.module('MyApp.controllers')
     .controller('PlayersCtrl', ['$scope', 'Player',
         function ($scope, Player) {
             'use strict';
@@ -11,4 +11,15 @@ angular.module('MyApp.controllers')
                 }).catch(function (reason) {
                     alert("Reason " + reason)
                 });
+         }]);*/
+
+angular.module('MyApp.controllers')
+    .controller('PlayersCtrl', ['$scope', 'Player',
+        function ($scope, Player) {
+            'use strict';
+
+            $scope.players = Player.query();
+            
+            // resolving promise will be taken care by router (ref - app.js)
+            
          }]);
